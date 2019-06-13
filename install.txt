@@ -1,0 +1,76 @@
+non-CAPTCHA and Honey-pots
+
+Tested with Zen Cart Version: 1.5.6b using PHP7.3
+Last Updated: 6/11/2019
+Author: Dave, CowboyGeek.com
+
+Released under the GNU General Public License v2
+The license is included with the zip file license-2.txt or you can
+find the GPL license details at: http://www.gnu.org/licenses/licenses.html#GPL
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Overview:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+I been giving instructions on how to do honey-pots, I've pointed out that eye 
+testing customers is a bad idea.  Than it don on me that no one has giving you
+a mod that does it for you.  
+
+This is a redesign of the should_be_empty line and added another hidden field.
+
+Also included is a human non-CAPTCHA slider that does not test one eyes.. 
+
+The bots..
+input field have a 1 to 1 chance of completing right.
+radio field has a 1 to 3 chance of completing right.
+both above can be hidden or in the open depending on the answer you are looking for.
+
+slider field has a 1 to 50 or 1000 chance of completing right.
+The slider, HTML5 has a min and max and out of this extreme possibilities exist... 
+lets see the bot guess that one!  You pick the number, the bot has to guess what's right.
+The human slides until a world pops up that you decided was right.
+The world was nothing to do but the number that would lives on does.
+The slider is Mobile, desktop, and keyboard friendly.
+------------------------------------------------------------------------------
+Updated for ZC1.5.6x
+
+Drag and drop only for zc156x version and use a compare program for zc155. 
+
+If you want the best, use the 156x with php 7.3 and up!
+
+Now:
+1) auto name changer which well change the field name every 10 days as is set now.
+2) New function to test for URL's in fields with a side effect of resetting sessions.
+3) no longer need to edit header file as long as one of the 4 notifiers exist. modified by @DrByte
+NOTIFY_NONCAPTCHA_CHECK
+NOTIFY_CREATE_ACCOUNT_CAPTCHA_CHECK
+NOTIFY_CONTACT_US_CAPTCHA_CHECK
+NOTIFY_REVIEWS_WRITE_CAPTCHA_CHECK
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Disclaimer
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Installation of this contribution is done at your own risk.
+Backup any and all applicable files before proceeding.
+This script is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Installation:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Straight forward installation. 
+
+1. Unzip noncaptcha.zip to a temp directory on you local system.
+
+2. Rename the 'responsive_classic' folder to the name of your on-line Zen Cart template 
+   folder if you are not using the responsive_classic.
+
+Upload all files to there respective folders or use a file compare and make the necessary changes. 
+
+The code block should replace the existing should_be_empty line
+
+The install file placed in admin adds 9 lines to the configuration Layout Settings.
+Here you can easily change the name of the form fields and more.  
+	
+ -- end of file --
