@@ -1,4 +1,4 @@
-# zenNonCAPTCHA
+# zenNonCAPTCHA v0.5
 For Zen Cart 1.5.6x
 
 CAPTCHA are such designed to prevent bots from reading them, that I have a hard time too.
