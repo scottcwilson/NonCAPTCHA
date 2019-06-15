@@ -126,7 +126,7 @@ class zcObserverNonCaptchaObserver extends base
     
     protected function testURLSpam()
     {
-        /* This Regular Expression filter only does 'http://www.mysite.com'
+         /* This Regular Expression filter only does 'http://www.mysite.com'
          * $reg_exUrl = '/(http|https|ftp|ftps)\:\/\/[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,3}(\/\S*)?/';
          *
          * This regular Expression filter does
@@ -136,7 +136,7 @@ class zcObserverNonCaptchaObserver extends base
          * somebody@google.com
          * www.url-with-querystring.com/?url=has-querystring
          **/
-        $reg_exUrl = '/((([A-Za-z]{3,9}:(?:\/\/)?)(?:[-;:&=\+\$,\w]+@)?[A-Za-z0-9.-]+(:[0-9]+)?|(?:www.|[-;:&=\+\$,\w]+@)[A-Za-z0-9.-]+)((?:\/[\+~%\/.\w-_]*)?\??(?:[-\+=&;%@.\w_]*)#?(?:[\w]*))?)/';
+        $reg_exUrl = "/(([A-Za-z]{3,9}:(?:\/\/)?)(?:[-;:&=\+\$,\w]+@)?[A-Za-z0-9.-]+|(?:www.|[-;:&=\+\$,\w]+@)[A-Za-z0-9.-]+)((?:\/[\+~%\/.\w-]*)?\??(?:[-\+=&;%@.\w_]*)#?(?:[\w]*))/";
         
         // The Text you want to filter for urls, most common input fields used
         $text = '';
@@ -172,8 +172,8 @@ class zcObserverNonCaptchaObserver extends base
         // We have a url spam
          $GLOBALS['antiSpam'] = 'html spam detected';
         }
-        
-        // if no urls in the text strip and return
+
+        // if no urls in the text, strip and return
         $text = '';
         return ;
     
